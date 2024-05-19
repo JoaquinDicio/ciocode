@@ -1,0 +1,247 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Anchord from "../components/Anchord.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <section id="home" class="h-screen w-full bg-[#15151D]">
+    <div
+      class="h-screen w-full bg-[url('bg.png')] bg-cover flex md:px-24 px-5 items-center"
+    >
+      <div
+        class="text-white flex flex-col items-start animate__animated animate__fadeIn"
+      >
+        <h2 class="font-bold text-3xl uppercase max-w-[450px]">
+          Diseño web profesional para impulsar tu negocio
+        </h2>
+        <p class="font-regular mt-2">
+          Transforma tu idea en una página web atractiva y funcional
+        </p>
+        <div class="mt-6 flex gap-3">
+          <Anchord text="Comenzar ahora" href="#contacto" />
+          <Anchord text="Saber más" variant={2} href="#beneficios" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    id="beneficios"
+    class="min-h-screen flex items-center md:px-20 py-10 md:py-0 bg-[#15151D]"
+  >
+    <div
+      class="grid grid-flow-col grid-cols-1 md:grid-cols-2 md:grid-rows-2 grid-rows-4 px-5 gap-5 max-w-[900px] mx-auto"
+    >
+      <div class="bg-red text-white p-5">
+        <h2 class="text-xl font-bold mb-6">Potencia tu negocio</h2>
+        <p class="mb-10">
+          En el mundo digital actual, tener una fuerte presencia en línea es
+          esencial para el éxito de cualquier negocio
+        </p>
+        <Anchord text="Comenzar ahora" href="#contacto" />
+      </div>
+      <div class="bg-red text-white p-8 bg-[#181822] rounded-md">
+        <h3 class="font-medium mb-5">Accesibilidad Total las 24hs</h3>
+        <p>
+          Ofrece a tus clientes la conveniencia de acceder a la información
+          sobre tu negocio y realizar consultas en cualquier momento y desde
+          cualquier lugar del mundo.
+        </p>
+      </div>
+      <div class="bg-red text-white p-8 bg-[#181822] rounded-md">
+        <h3 class="font-medium mb-5">Aumenta tus ventas</h3>
+        <p>
+          Una página web bien diseñada puede convertir visitantes en clientes,
+          aumentando así tus ventas y generando mayores ingresos para tu
+          negocio.
+        </p>
+      </div>
+
+      <div class="bg-red text-white p-8 bg-[#181822] rounded-md">
+        <h3 class="font-medium mb-5">Diferenciate de tu competencia</h3>
+        <p>
+          Destaca frente a la competencia al tener una presencia en línea única
+          y atractiva que resalte los valores y servicios distintivos de tu
+          negocio.
+        </p>
+      </div>
+    </div>
+  </section>
+  <div class="bg-[#15151D] text-white">
+    <div
+      class="bg-[url('/bg.png')] min-h-[160px] flex flex-col md:flex-row justify-center items-center text-center md:text-start md:justify-between md:px-20 py-14 px-5 w-full bg-cover"
+    >
+      <div>
+        <p class="font-medium mb-5 md:mb-0 text-2xl">
+          Hosting y dominio GRATIS por un año
+        </p>
+        <p class="mb-5 md:mb-0">
+          Paga tu web una sola vez y difrutala por un año
+        </p>
+      </div>
+      <Anchord text="Comenzar ahora" />
+    </div>
+  </div>
+  <section
+    id="proyectos"
+    class="bg-[#15151D] py-16 px-6 md:p-0 text-white min-h-screen md:px-20 flex flex-col justify-center"
+  >
+    <div class="max-w-[900px] mx-auto">
+      <div class="max-w-[600px]">
+        <h2 class="text-2xl font-bold mb-6">Nuestra evidencia de éxito</h2>
+        <p>
+          Echa un vistazo a nuestros ultimos proyectos y descubre cómo hemos
+          llevado a nuestros clientes hacia el éxito en línea.
+        </p>
+      </div>
+      <div
+        class="grid gap-3 mt-10 md:grid-cols-2 md:grid-rows-2 grid-cols-1 grid-rows-4"
+      >
+        <div class="bg-[url('/dentalserranos.jpeg')] bg-cover rounded-md">
+          <div
+            class="bg-black/70 p-5 h-[200px] flex flex-col items-center justify-center"
+          >
+            <p class="font-medium uppercase">dental serranos</p>
+            <p class="text-sm">LandingPage</p>
+            <Anchord
+              text="Ver proyecto"
+              variant={2}
+              href="https://dentalserranos.com"
+              extraClasses="text-sm px-3 py-1.5 mt-3"
+            />
+          </div>
+        </div>
+        <div class="bg-[url('/manglar.jpeg')] bg-cover rounded-md">
+          <div
+            class="bg-black/70 p-5 h-[200px] flex flex-col items-center justify-center"
+          >
+            <p class="font-medium uppercase">manglar de bagheera</p>
+            <p class="text-sm">LandingPage</p>
+            <Anchord
+              text="Ver proyecto"
+              variant={2}
+              href="https://manglarbagheera.netlify.app/"
+              extraClasses="text-sm px-3 py-1.5 mt-3"
+            />
+          </div>
+        </div>
+        <div class="bg-[url('/tecrom.jpeg')] bg-cover rounded-md">
+          <div
+            class="bg-black/70 p-5 h-[200px] flex flex-col items-center justify-center"
+          >
+            <p class="font-medium uppercase">tecnica rom</p>
+            <p class="text-sm">LandingPage</p>
+            <Anchord
+              text="Ver proyecto"
+              variant={2}
+              href="https://joaquindicio.github.io/mech-website/"
+              extraClasses="text-sm px-3 py-1.5 mt-3"
+            />
+          </div>
+        </div>
+
+        <div
+          class="bg-[#181822] rounded-md p-10 h-[200px] flex flex-col items-start justify-center"
+        >
+          <h4 class="font-medium text-xl mb-5 pr-10">
+            Tus clientes te están buscando Google
+          </h4>
+          <Anchord text="Quiero que me encuentren" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    id="contacto"
+    class="bg-[#181822] md:min-h-screen py-16 px-8 text-white md:px-20 flex flex-col justify-center"
+  >
+    <div class="max-w-[900px] mx-auto">
+      <h2 class="font-bold text-2xl mb-5">Solicitá un prototipo sin costo</h2>
+      <p class="max-w-[800px]">
+        Dejanos mostrarte cómo podemos convertir tus ideas en realidad. Estamos
+        emocionados en colaborar con vos en este emocionante viaje hacia el
+        éxito en línea.
+      </p>
+      <p class="font-bold mt-5">
+        No sólo veras tu idea puesta en marcha, sino también el valor final de
+        la misma.
+      </p>
+      <div
+        class="flex gap-3 flex-wrap md:flex-nowrap flex-col-reverse md:flex-row"
+      >
+        <form class="flex flex-col max-w-[800px] w-full gap-2 mt-8">
+          <input
+            id="nombre-empresa"
+            type="text"
+            placeholder="Nombre de la empresa"
+            class="px-3 py-2 border bg-[#15151D] rounded-md border-white"
+          />
+          <input
+            id="rubro-empresa"
+            type="text"
+            placeholder="Rubro de la empresa"
+            class="px-3 py-2 border bg-[#15151D] rounded-md border-white"
+          />
+          <textarea
+            id="mensaje"
+            placeholder="Contanos qué necesita tu web"
+            class="px-3 py-2 border bg-[#15151D] rounded-md border-white"
+          ></textarea>
+          <button
+            id="submit"
+            class="rounded-md px-5 py-3 flex items-center gap-1 justify-center bg-[#514DEA] font-medium text-white"
+          >
+            Enviar
+          </button>
+        </form>
+        <div
+          class="bg-[#1515151D] rounded-md flex-col my-5 mt-8 md:mb-0 justify-center md:flex hidden w-fit max-w-[320px] p-6"
+        >
+          <p class="font-medium text-xl mb-8">
+            Nuestros presupuestos comienzan desde los
+            <strong>AR$ 70.000</strong>
+          </p>
+          <i>Sin extras mensuales</i>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer
+    class="flex flex-wrap py-5 justify-around px-8 text-white bg-[#15151D]"
+  >
+    <p class="text-sm text-center">Ciocode - Todos los derechos reservados</p>
+  </footer>
+</Layout>
+<script>
+  const submit = document.getElementById("submit");
+  submit.addEventListener("click", (e) => {
+    e.preventDefault();
+    submit.textContent = "Enviando...";
+    let error = false;
+
+    const nombre_empresa = document.getElementById("nombre-empresa");
+    const rubro_empresa = document.getElementById("rubro-empresa");
+    const mensaje = document.getElementById("mensaje");
+
+    error = check_error(nombre_empresa);
+    error = check_error(rubro_empresa);
+    error = check_error(mensaje);
+
+    if (error) {
+      submit.textContent = "Reintentar";
+    } else {
+      nombre_empresa.value.replace(" ", "%20");
+      rubro_empresa.value.replace(" ", "%20");
+      mensaje.value.replace(" ", "%20");
+      submit.textContent = "Redireccionando";
+      window.location.href = `https://api.whatsapp.com/send?phone=541126655209&text=Hola!%20somos%20${nombre_empresa.value}%20(${rubro_empresa.value})%20%F0%9F%A4%9D%20${mensaje.value}`;
+    }
+  });
+
+  function check_error(element, error) {
+    if (element.value?.trim() == "") {
+      element.classList.add("border");
+      element.classList.add("border-red-500");
+      return true;
+    }
+  }
+</script>

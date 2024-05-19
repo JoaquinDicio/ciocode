@@ -1,0 +1,12 @@
+---
+const { text, href = "#contacto", variant = 1, extraClasses } = Astro.props;
+
+const classes = {
+  1: "rounded-md px-5 py-3 bg-[#514DEA] font-medium text-white",
+  2: "rounded-md px-5 py-3 border border-white border-1 bg-transparent font-medium text-white",
+};
+---
+
+<a href={href} class={classes[variant] + " " + extraClasses}>
+  {text}
+</a>
