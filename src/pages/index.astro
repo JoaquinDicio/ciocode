@@ -83,7 +83,7 @@ import Anchord from "../components/Anchord.astro";
   </div>
   <section
     id="proyectos"
-    class="bg-[#15151D] py-16 px-6 md:p-0 text-white min-h-screen md:px-20 flex flex-col justify-center"
+    class="bg-[#15151D] py-16 px-6 text-white min-h-screen md:px-20 flex flex-col justify-center"
   >
     <div class="max-w-[900px] mx-auto">
       <div class="max-w-[600px]">
@@ -150,13 +150,51 @@ import Anchord from "../components/Anchord.astro";
       </div>
     </div>
   </section>
+  <div class="bg-[#15151D] text-white">
+    <div
+      class="bg-[url('/bg.png')] min-h-[160px] flex flex-col md:flex-row justify-center items-center text-center md:text-start md:justify-between md:px-20 py-14 px-5 w-full bg-cover"
+    >
+      <div>
+        <p class="mb-1">Aprovechá 30% OFF en tu landing page</p>
+        <p class="font-medium">Obtén la tuya desde AR$70.000</p>
+      </div>
+      <div class="md:mt-0 mt-8">
+        <div class="flex">
+          <div
+            class="bg-[#181822] font-medium w-[50px] p-2 rounded-sm mx-1 flex justify-center flex-col items-center"
+          >
+            <p>10</p>
+            <p>DIAS</p>
+          </div>
+          <div
+            class="bg-[#181822] font-medium w-[50px] p-2 rounded-sm mx-1 flex justify-center flex-col items-center"
+          >
+            <p>05</p>
+            <p>HS</p>
+          </div>
+          <div
+            class="bg-[#181822] font-medium w-[50px] p-2 rounded-sm mx-1 flex justify-center flex-col items-center"
+          >
+            <p id="minutes">25</p>
+            <p>MIN</p>
+          </div>
+          <div
+            class="bg-[#181822] font-medium w-[50px] p-2 rounded-sm mx-1 flex justify-center flex-col items-center"
+          >
+            <p id="seconds">10</p>
+            <p>SEG</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <section
     id="contacto"
     class="bg-[#181822] md:min-h-screen py-16 px-8 text-white md:px-20 flex flex-col justify-center"
   >
     <div class="max-w-[900px] mx-auto">
-      <h2 class="font-bold text-2xl mb-5">Solicitá un prototipo sin costo</h2>
-      <p class="max-w-[800px]">
+      <h2 class="font-bold text-2xl my-5">Solicitá un prototipo sin costo</h2>
+      <p class="max-w-[600px]">
         Dejanos mostrarte cómo podemos convertir tus ideas en realidad. Estamos
         emocionados en colaborar con vos en este emocionante viaje hacia el
         éxito en línea.
@@ -193,15 +231,6 @@ import Anchord from "../components/Anchord.astro";
             Enviar
           </button>
         </form>
-        <div
-          class="bg-[#1515151D] rounded-md flex-col my-5 mt-8 md:mb-0 justify-center md:flex hidden w-fit max-w-[320px] p-6"
-        >
-          <p class="font-medium text-xl mb-8">
-            Nuestros presupuestos comienzan desde los
-            <strong>AR$ 70.000</strong>
-          </p>
-          <i>Sin extras mensuales</i>
-        </div>
       </div>
     </div>
   </section>
@@ -210,38 +239,52 @@ import Anchord from "../components/Anchord.astro";
   >
     <p class="text-sm text-center">Ciocode - Todos los derechos reservados</p>
   </footer>
+  <script>
+    setInterval(() => updateCountDown(), 1000);
+
+    function updateCountDown() {
+      const sec = document.getElementById("seconds");
+      const min = document.getElementById("minutes");
+
+      if (parseInt(sec.textContent) > 0) {
+        sec.textContent = (parseInt(sec.textContent) - 1).toString();
+      } else {
+        sec.textContent = "59";
+        min.textContent = (parseInt(min.textContent) - 1).toString();
+      }
+    }
+
+    const submit = document.getElementById("submit");
+    submit.addEventListener("click", (e) => {
+      e.preventDefault();
+      submit.textContent = "Enviando...";
+      let error = false;
+
+      const nombre_empresa = document.getElementById("nombre-empresa");
+      const rubro_empresa = document.getElementById("rubro-empresa");
+      const mensaje = document.getElementById("mensaje");
+
+      error = check_error(nombre_empresa);
+      error = check_error(rubro_empresa);
+      error = check_error(mensaje);
+
+      if (error) {
+        submit.textContent = "Reintentar";
+      } else {
+        nombre_empresa.value.replace(" ", "%20");
+        rubro_empresa.value.replace(" ", "%20");
+        mensaje.value.replace(" ", "%20");
+        submit.textContent = "Redireccionando";
+        window.location.href = `https://api.whatsapp.com/send?phone=541126655209&text=Hola!%20somos%20${nombre_empresa.value}%20(${rubro_empresa.value})%20%F0%9F%A4%9D%20${mensaje.value}`;
+      }
+    });
+
+    function check_error(element, error) {
+      if (element.value?.trim() == "") {
+        element.classList.add("border");
+        element.classList.add("border-red-500");
+        return true;
+      }
+    }
+  </script>
 </Layout>
-<script>
-  const submit = document.getElementById("submit");
-  submit.addEventListener("click", (e) => {
-    e.preventDefault();
-    submit.textContent = "Enviando...";
-    let error = false;
-
-    const nombre_empresa = document.getElementById("nombre-empresa");
-    const rubro_empresa = document.getElementById("rubro-empresa");
-    const mensaje = document.getElementById("mensaje");
-
-    error = check_error(nombre_empresa);
-    error = check_error(rubro_empresa);
-    error = check_error(mensaje);
-
-    if (error) {
-      submit.textContent = "Reintentar";
-    } else {
-      nombre_empresa.value.replace(" ", "%20");
-      rubro_empresa.value.replace(" ", "%20");
-      mensaje.value.replace(" ", "%20");
-      submit.textContent = "Redireccionando";
-      window.location.href = `https://api.whatsapp.com/send?phone=541126655209&text=Hola!%20somos%20${nombre_empresa.value}%20(${rubro_empresa.value})%20%F0%9F%A4%9D%20${mensaje.value}`;
-    }
-  });
-
-  function check_error(element, error) {
-    if (element.value?.trim() == "") {
-      element.classList.add("border");
-      element.classList.add("border-red-500");
-      return true;
-    }
-  }
-</script>
