@@ -1,0 +1,21 @@
+---
+import { content } from '../i18n';
+
+// Número PAR de copias: el track queda dividido en dos mitades idénticas y la
+// animación va de 0 a -50% para un loop sin saltos. Cada mitad debe ser más
+// ancha que el viewport; con solo 2 copias las pantallas anchas quedaban con
+// gran parte del marquee vacía durante el ciclo.
+const COPIES = 6;
+const loop = Array.from({ length: COPIES }, () => content.marquee).flat();
+---
+
+<div class="marquee border-b border-white/5 bg-night-900/60 py-4" aria-hidden="true">
+  <div class="marquee-track">
+    {loop.map((item) => (
+      <span class="flex items-center gap-3 pr-6 text-sm font-medium whitespace-nowrap text-slate-400">
+        <span class="h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+        {item}
+      </span>
+    ))}
+  </div>
+</div>

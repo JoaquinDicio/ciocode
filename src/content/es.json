@@ -1,0 +1,270 @@
+{
+  "site": {
+    "name": "CIOCODE",
+    "tagline": "Soluciones digitales para hacer crecer tu negocio.",
+    "description": "Desarrollamos sitios web, sistemas, automatizaciones y productos digitales a medida para empresas que necesitan soluciones reales.",
+    "locale": "es_AR"
+  },
+  "nav": {
+    "links": [
+      {
+        "label": "Servicios",
+        "href": "#servicios"
+      },
+      {
+        "label": "Trabajos",
+        "href": "#trabajos"
+      },
+      {
+        "label": "Cómo trabajamos",
+        "href": "#proceso"
+      },
+      {
+        "label": "Sobre CIOCODE",
+        "href": "#sobre-ciocode"
+      }
+    ],
+    "cta": "Contanos qué necesitás"
+  },
+
+  "hero": {
+    "badge": "Desarrollo de software y soluciones digitales",
+    "titleBefore": "Convertimos necesidades de negocio en ",
+    "titleAccent": "soluciones digitales",
+    "titleAfter": ".",
+    "rotatorLabel": "Desarrollamos",
+    "rotatorWords": [
+      "sitios web",
+      "sistemas a medida",
+      "automatizaciones",
+      "productos SaaS"
+    ],
+    "rotatorSrText": "Desarrollamos sitios web, sistemas a medida, automatizaciones y productos SaaS.",
+    "primaryCta": "Contanos qué necesitás",
+    "secondaryCta": "Hablemos por WhatsApp",
+    "stats": [
+      {
+        "label": "Enfoque",
+        "value": "A medida"
+      },
+      {
+        "label": "Desarrollo",
+        "value": "Completo"
+      },
+      {
+        "label": "Resultado",
+        "value": "En producción"
+      }
+    ],
+    "aside": {
+      "title": "Qué podemos resolver",
+      "items": [
+        "Una web profesional para presentar tu negocio y generar consultas.",
+        "Un sistema para ordenar procesos, stock, reparaciones y ventas.",
+        "Automatizaciones para reducir tareas repetitivas y ahorrar tiempo.",
+        "Renovacion de equipos informáticos para mejorar la calidad de tu negocio."
+      ],
+      "note": "Entendemos tu necesidad, diseñamos la solución y la llevamos a producción."
+    }
+  },
+  "marquee": [
+    "Desarrollo web",
+    "Sistemas a medida",
+    "Automatizaciones",
+    "Productos SaaS",
+    "PCs a medida",
+    "Soluciones para empresas"
+  ],
+  "services": {
+    "eyebrow": "Servicios",
+    "title": "Tecnología pensada para necesidades reales",
+    "description": "Desarrollamos soluciones digitales según lo que necesita cada negocio. Desde una web hasta sistemas y herramientas que forman parte de la operación diaria.",
+    "featuredLabel": "Desarrollo web",
+    "featuredLink": "Conocé nuestra propuesta →",
+    "note": "Si necesitás una solución diferente, también podemos desarrollarla.",
+    "items": [
+      {
+        "slug": "desarrollo-web",
+        "title": "Desarrollo web",
+        "description": "Sitios institucionales, landing pages y páginas comerciales rápidas, profesionales y adaptadas a cada negocio.",
+        "icon": "globe",
+        "featured": true
+      },
+      {
+        "slug": "sistemas-a-medida",
+        "title": "Sistemas a medida",
+        "description": "Software diseñado para resolver procesos específicos y mejorar la forma en que trabaja tu negocio.",
+        "icon": "layers"
+      },
+      {
+        "slug": "automatizaciones",
+        "title": "Automatizaciones",
+        "description": "Conectamos herramientas y automatizamos tareas repetitivas para ahorrar tiempo y reducir errores.",
+        "icon": "zap"
+      },
+      {
+        "slug": "saas",
+        "title": "Productos SaaS",
+        "description": "Desarrollamos productos digitales y plataformas accesibles desde cualquier lugar.",
+        "icon": "cloud"
+      },
+      {
+        "slug": "pcs-a-medida",
+        "title": "PCs a medida",
+        "description": "Armado de equipos según el uso, necesidades y presupuesto de cada cliente.",
+        "icon": "cpu"
+      }
+    ]
+  },
+  "work": {
+    "eyebrow": "Últimos trabajos",
+    "title": "Proyectos reales, soluciones ",
+    "description": "Cada proyecto parte de una necesidad concreta. Estas son algunas de las soluciones que desarrollamos.",
+    "items": [
+      {
+        "slug": "resticy",
+        "name": "Resticy",
+        "description": "Sistema de gestión de pedidos en tiempo real para restaurantes y cafeterías.",
+        "type": "Sistema a medida",
+        "features": [
+          "Pedidos en tiempo real desde cada mesa",
+          "Menú configurable por el local",
+          "QR por mesa para pedir sin espera",
+          "Cobros integrados con MercadoPago"
+        ]
+      },
+      {
+        "slug": "blackstar-logistics",
+        "name": "BlackstarLogistics",
+        "description": "Landing page empresarial para presentar los servicios de comercio internacional del cliente.",
+        "type": "Desarrollo web",
+        "features": [
+          "Presentación institucional de la empresa",
+          "Detalle de servicios de comercio exterior"
+        ],
+        "url": "https://blackstar-logistics.com/es/"
+      },
+      {
+        "slug": "marketplace-scrapper",
+        "name": "MarketplaceScrapper",
+        "description": "Herramienta que analiza publicaciones de compra-venta de forma automática.",
+        "type": "Automatización",
+        "features": [
+          "Análisis automático de publicaciones con filtros",
+          "Informe con las mejores oportunidades de compra",
+          "Pensada para quienes hacen compra-venta"
+        ]
+      },
+      {
+        "slug": "clinica-dental-serranos",
+        "name": "Clínica Dental Serranos",
+        "description": "Landing page para presentar los servicios odontológicos de la clínica.",
+        "type": "Desarrollo web",
+        "features": [
+          "Presentación de servicios de odontología",
+          "Reserva de turnos online"
+        ],
+        "url": "https://dentalserranos.com/",
+        "image": "/projects/dental-serranos.jpeg"
+      },
+      {
+        "slug": "manglar-bagheera",
+        "name": "Manglar de Bagheera",
+        "description": "Landing page desarrollada a medida para el cliente.",
+        "type": "Desarrollo web",
+        "url": "https://manglarbagheera.netlify.app/",
+        "image": "/projects/manglar-bagheera.jpeg"
+      },
+      {
+        "slug": "tecnica-rom",
+        "name": "Técnica Rom",
+        "description": "Landing page desarrollada a medida para el cliente.",
+        "type": "Desarrollo web",
+        "url": "https://joaquindicio.github.io/mech-website/",
+        "image": "/projects/tecnica-rom.jpeg"
+      }
+    ],
+    "visitLabel": "Visitar sitio"
+  },
+  "prototype": {
+    "eyebrow": "Prototipo sin costo",
+    "titleBefore": "Solicitá un ",
+    "titleAccent": "prototipo sin costo",
+    "titleAfter": "",
+    "description": "Contanos tu idea y te mostramos cómo podría verse hecha realidad. Vas a ver tu propuesta puesta en marcha y el valor que puede aportar a tu negocio, antes de tomar una decisión.",
+    "cta": "Solicitar mi prototipo"
+  },
+  "process": {
+    "eyebrow": "Cómo trabajamos",
+    "title": "De una necesidad a una solución",
+    "description": "Trabajamos directamente con cada cliente para entender el problema y construir una solución que realmente tenga sentido.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Hablamos",
+        "description": "Nos contás qué necesitás, qué problema querés resolver o qué idea tenés."
+      },
+      {
+        "number": "02",
+        "title": "Entendemos la necesidad",
+        "description": "Analizamos tu caso y definimos qué solución tiene más sentido para tu negocio."
+      },
+      {
+        "number": "03",
+        "title": "Desarrolamos la solución",
+        "description": "Construimos la solución y te mostramos avances para poder ajustar durante el proceso."
+      },
+      {
+        "number": "04",
+        "title": "Publicamos y entregamos",
+        "description": "Dejamos todo funcionando y te acompañamos en la puesta en marcha."
+      }
+    ]
+  },
+  "webOffer": {
+    "eyebrow": "Desarrollo web",
+    "title": "Una web profesional, lista para salir al mundo",
+    "description": "Si necesitás presencia online, nos encargamos del desarrollo y de toda la configuración necesaria para que tu sitio quede publicado y funcionando.",
+    "cta": "Quiero mi web",
+    "listTitle": "La propuesta incluye",
+    "freeBadge": "Hosting y dominio gratis durante el primer año",
+    "included": [
+      "Desarrollo del sitio a medida",
+      "Hosting incluido durante el primer año",
+      "Dominio incluido durante el primer año",
+      "Certificado SSL",
+      "Configuración inicial",
+      "Sitio publicado y funcionando"
+    ],
+    "note": "El hosting, el dominio y el SSL están incluidos durante el primer año. Después, podés continuar con el servicio que necesites. No es una suscripción obligatoria."
+  },
+  "about": {
+    "eyebrow": "Sobre CIOCODE",
+    "title": "Desarrollo pensado para resolver problemas reales",
+    "paragraphs": [
+      "Somos CIOCODE, un equipo enfocado en desarrollo de software y soluciones digitales para empresas y emprendimientos.",
+      "Trabajamos directamente con cada cliente para entender qué necesita y encontrar la solución que mejor se adapte a su negocio.",
+      "Puede ser una web, un sistema interno, una automatización o una idea que todavía no existe. Analizamos el problema, desarrollamos la solución y la llevamos a producción."
+    ]
+  },
+  "finalCta": {
+    "titleBefore": "¿Tenés una idea o un problema que ",
+    "titleAccent": "necesitás resolver",
+    "titleAfter": "?",
+    "description": "Contanos qué necesitás. Aunque todavía no tengas definida la solución, podemos empezar por entender el problema.",
+    "cta": "Hablemos"
+  },
+  "footer": {
+    "tagline": "Desarrollo web, sistemas y soluciones digitales a medida.",
+    "whatsappLabel": "WhatsApp",
+    "emailLabel": "Email",
+    "instagramLabel": "Instagram"
+  },
+  "whatsapp": {
+    "defaultMessage": "Hola CIOCODE, quiero consultar por una solución para mi negocio. ¿Podemos hablar?",
+    "secondaryMessage": "Hola CIOCODE, tenemos una idea y queremos consultar si pueden ayudarnos a desarrollarla.",
+    "webMessage": "Hola CIOCODE, me interesa la propuesta de desarrollo web. ¿Me pasan más información?",
+    "finalMessage": "Hola CIOCODE, tenemos una idea / un problema que necesitamos resolver. ¿Conversamos?",
+    "prototypeMessage": "Hola CIOCODE, quiero solicitar un prototipo sin costo para mi negocio."
+  }
+}

@@ -1,0 +1,60 @@
+---
+import SectionHeading from "./SectionHeading.astro";
+import ProjectCard from "./ProjectCard.astro";
+import { content } from "../i18n";
+import { projects } from "../data/projects";
+
+const copy = content.work;
+---
+
+<section
+  id="trabajos"
+  class="scroll-mt-20 border-b border-white/5 bg-night-900/40"
+>
+  <div class="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-28">
+    <SectionHeading
+      eyebrow={copy.eyebrow}
+      title={copy.title}
+      description={copy.description}
+    />
+
+    <div class="embla mt-12 cursor-grab active:cursor-grabbing" data-embla>
+      <div class="overflow-hidden select-none" data-embla-viewport>
+        <div class="flex" data-embla-container>
+          {
+            projects.map((project, i) => (
+              <div class="min-w-0 flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33.3333%]">
+                <ProjectCard project={project} index={i} />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import EmblaCarousel from "embla-carousel";
+  import Autoplay from "embla-carousel-autoplay";
+
+  const viewport = document.querySelector("[data-embla-viewport]");
+  if (viewport instanceof HTMLElement) {
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    EmblaCarousel(
+      viewport,
+      { loop: true, align: "start" },
+      reduceMotion
+        ? []
+        : [
+            Autoplay({
+              delay: 3500,
+              stopOnInteraction: false,
+              stopOnMouseEnter: true,
+            }),
+          ],
+    );
+  }
+</script>

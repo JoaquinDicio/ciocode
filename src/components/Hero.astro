@@ -1,0 +1,106 @@
+---
+import { MessageCircle } from "@lucide/astro";
+import { whatsappUrl } from "../config/site";
+import { content } from "../i18n";
+
+const hero = content.hero;
+const primaryCta = whatsappUrl(content.whatsapp.defaultMessage);
+const secondaryCta = whatsappUrl(content.whatsapp.secondaryMessage);
+// El rotador necesita la primera palabra duplicada al final para un loop fluido.
+const rotatorWords = [...hero.rotatorWords, hero.rotatorWords[0]];
+---
+
+<section id="inicio" class="hero-glow border-b border-white/5">
+  <div
+    class="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:px-8 md:grid-cols-[1.2fr_0.8fr] md:items-center md:py-28"
+  >
+    <div data-aos="fade-up">
+      <p
+        class="inline-flex items-center gap-2 rounded-full border border-brand-400/25 bg-night-800/80 px-3 py-1 text-xs font-medium text-brand-300"
+      >
+        <span
+          class="pulse-dot h-1.5 w-1.5 rounded-full bg-brand-400"
+          aria-hidden="true"></span>
+        {hero.badge}
+      </p>
+      <h1
+        class="mt-6 text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl"
+      >
+        {hero.titleBefore}<span class="text-gradient">{hero.titleAccent}</span>{
+          hero.titleAfter
+        }
+      </h1>
+      <div
+        class="mt-5 flex items-center gap-2 text-base text-slate-400"
+        aria-label={hero.rotatorSrText}
+      >
+        <span class="shrink-0">{hero.rotatorLabel}</span>
+        <span class="rotator font-semibold text-brand-300" aria-hidden="true">
+          <ul>
+            {rotatorWords.map((word) => <li>{word}</li>)}
+          </ul>
+        </span>
+      </div>
+      <p class="sr-only">{hero.rotatorSrText}</p>
+      <p class="mt-4 max-w-xl text-lg leading-relaxed text-slate-400">
+        {content.site.description}
+      </p>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <a
+          href={primaryCta}
+          target="_blank"
+          rel="noopener"
+          class="btn-primary btn-gradient inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 text-base font-semibold text-white"
+        >
+          <MessageCircle size={18} aria-hidden="true" />
+          {hero.primaryCta}
+        </a>
+        <a
+          href={secondaryCta}
+          target="_blank"
+          rel="noopener"
+          class="btn-secondary inline-flex items-center justify-center gap-2 rounded-lg border border-white/15 px-6 py-3 text-base font-medium text-slate-200"
+        >
+          {hero.secondaryCta}
+        </a>
+      </div>
+      <dl
+        class="mt-10 grid max-w-md grid-cols-1 gap-4 border-t border-white/10 pt-6 text-sm sm:grid-cols-3 sm:gap-6"
+      >
+        {
+          hero.stats.map((stat) => (
+            <div>
+              <dt class="text-slate-500">{stat.label}</dt>
+              <dd class="mt-1 font-medium text-slate-200">{stat.value}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+
+    <aside
+      class="card-subtle rounded-2xl p-6 sm:p-8"
+      aria-label={hero.aside.title}
+      data-aos="fade-up"
+      data-aos-delay="150"
+    >
+      <h2 class="text-base font-semibold text-white">{hero.aside.title}</h2>
+      <ul class="mt-5 space-y-4 text-sm leading-relaxed text-slate-300">
+        {
+          hero.aside.items.map((item) => (
+            <li class="flex gap-3">
+              <span
+                class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-400"
+                aria-hidden="true"
+              />
+              {item}
+            </li>
+          ))
+        }
+      </ul>
+      <p class="mt-6 border-t border-white/10 pt-5 text-sm text-slate-400">
+        {hero.aside.note}
+      </p>
+    </aside>
+  </div>
+</section>

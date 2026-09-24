@@ -1,0 +1,30 @@
+---
+import { MessageCircle } from '@lucide/astro';
+import { whatsappUrl } from '../config/site';
+import { content } from '../i18n';
+
+const copy = content.finalCta;
+const cta = whatsappUrl(content.whatsapp.finalMessage);
+---
+
+<section id="contacto" class="hero-glow scroll-mt-20">
+  <div class="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-28">
+    <div class="panel-gradient rounded-2xl border border-brand-400/25 px-6 py-14 text-center sm:px-12 md:py-16" data-aos="fade-up">
+      <h2 class="mx-auto max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+        {copy.titleBefore}<span class="text-gradient">{copy.titleAccent}</span>{copy.titleAfter}
+      </h2>
+      <p class="mx-auto mt-4 max-w-xl leading-relaxed text-slate-400">
+        {copy.description}
+      </p>
+      <a
+        href={cta}
+        target="_blank"
+        rel="noopener"
+        class="btn-primary btn-gradient mt-8 inline-flex items-center gap-2 rounded-lg px-8 py-3.5 text-base font-semibold text-white"
+      >
+        <MessageCircle size={18} aria-hidden="true" />
+        {copy.cta}
+      </a>
+    </div>
+  </div>
+</section>

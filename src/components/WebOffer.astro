@@ -1,0 +1,52 @@
+---
+import { Check, Gift, MessageCircle } from '@lucide/astro';
+import { whatsappUrl } from '../config/site';
+import { content } from '../i18n';
+
+const copy = content.webOffer;
+const cta = whatsappUrl(content.whatsapp.webMessage);
+---
+
+<section id="web" class="scroll-mt-20 border-b border-white/5 bg-night-900/40">
+  <div class="mx-auto grid max-w-6xl gap-10 px-5 py-20 sm:px-8 md:grid-cols-2 md:items-center md:py-28">
+    <div data-aos="fade-up">
+      <p class="text-sm font-semibold tracking-wide text-brand-300 uppercase">{copy.eyebrow}</p>
+      <h2 class="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+        {copy.title}
+      </h2>
+      <p class="mt-4 leading-relaxed text-slate-400">
+        {copy.description}
+      </p>
+      <a
+        href={cta}
+        target="_blank"
+        rel="noopener"
+        class="btn-primary btn-gradient mt-8 inline-flex items-center gap-2 rounded-lg px-6 py-3 text-base font-semibold text-white"
+      >
+        <MessageCircle size={18} aria-hidden="true" />
+        {copy.cta}
+      </a>
+    </div>
+
+    <div class="card-subtle rounded-2xl p-7 sm:p-8" data-aos="fade-up" data-aos-delay="150">
+      <h3 class="text-base font-semibold text-white">{copy.listTitle}</h3>
+      <p class="mt-4 inline-flex items-center gap-2 rounded-full border border-brand-400/30 bg-brand-500/15 px-3 py-1.5 text-xs font-semibold text-brand-300">
+        <Gift size={14} aria-hidden="true" />
+        {copy.freeBadge}
+      </p>
+      <ul class="mt-5 space-y-3.5">
+        {copy.included.map((item) => (
+          <li class="flex items-start gap-3 text-sm text-slate-300">
+            <span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-500/15 text-brand-300">
+              <Check size={14} aria-hidden="true" />
+            </span>
+            {item}
+          </li>
+        ))}
+      </ul>
+      <p class="mt-6 border-t border-white/10 pt-5 text-sm leading-relaxed text-slate-400">
+        {copy.note}
+      </p>
+    </div>
+  </div>
+</section>

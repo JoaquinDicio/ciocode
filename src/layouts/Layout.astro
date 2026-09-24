@@ -1,0 +1,117 @@
+---
+import { siteConfig, whatsappUrl } from '../config/site';
+import { content } from '../i18n';
+import '../styles/global.css';
+import 'aos/dist/aos.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = `${content.site.name} — ${content.site.tagline}`,
+  description = content.site.description,
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, siteConfig.siteUrl).toString();
+const ogImage = new URL('/og-image.svg', siteConfig.siteUrl).toString();
+const wa = whatsappUrl();
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#050b18" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={content.site.locale} />
+    <meta property="og:site_name" content={content.site.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-night-950 text-slate-100 antialiased">
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-night-950/85 backdrop-blur">
+      <nav class="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8" aria-label="Principal">
+        <a href="#inicio" class="flex items-center gap-2.5">
+          <img src="/logos/logo-c-terminal.svg" alt="CIOCODE" width="32" height="32" class="h-8 w-8" />
+          <span class="text-base font-semibold tracking-tight">{content.site.name}</span>
+        </a>
+        <ul class="hidden items-center gap-7 text-sm text-slate-300 md:flex">
+          {content.nav.links.map((link) => (
+            <li>
+              <a class="link-hover hover:text-white" href={link.href}>{link.label}</a>
+            </li>
+          ))}
+        </ul>
+        <a
+          href={wa}
+          target="_blank"
+          rel="noopener"
+          class="btn-primary btn-gradient rounded-lg px-4 py-2 text-sm font-semibold text-white"
+        >
+          {content.nav.cta}
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="border-t border-white/10">
+      <div class="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-10 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+        <p class="flex items-center gap-2.5"><img src="/logos/logo-c-terminal.svg" alt="CIOCODE" width="24" height="24" class="h-6 w-6" /><span><span class="font-semibold text-slate-200">{content.site.name}</span> — {content.footer.tagline}</span></p>
+        <div class="flex items-center gap-5">
+          <a class="link-hover hover:text-white" href={wa} target="_blank" rel="noopener">{content.footer.whatsappLabel}</a>
+          {siteConfig.contact.email ? (
+            <a class="link-hover hover:text-white" href={`mailto:${siteConfig.contact.email}`}>{content.footer.emailLabel}</a>
+          ) : null}
+          {siteConfig.contact.instagramUrl ? (
+            <a
+              class="link-hover hover:text-white"
+              href={siteConfig.contact.instagramUrl}
+              target="_blank"
+              rel="noopener"
+              aria-label={content.footer.instagramLabel}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
+            </a>
+          ) : null}
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      import AOS from 'aos';
+      AOS.init({
+        once: true,
+        duration: 700,
+        offset: 60,
+        easing: 'ease-out-cubic',
+        disable: () => window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+      });
+    </script>
+  </body>
+</html>

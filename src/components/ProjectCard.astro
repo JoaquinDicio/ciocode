@@ -1,0 +1,58 @@
+---
+import { Check, ExternalLink } from '@lucide/astro';
+import { content } from '../i18n';
+import type { Project } from '../data/projects';
+
+interface Props {
+  project: Project;
+  index: number;
+}
+
+const { project, index } = Astro.props;
+// Imagen de respaldo cuando el proyecto no tiene captura propia.
+const FALLBACK_IMAGE = '/projects/placeholder.png';
+---
+
+<article class="card-subtle mr-5 flex h-full flex-col rounded-2xl p-7" data-aos="fade-up" data-aos-delay={String((index % 3) * 100)}>
+  <img
+    src={project.image ?? FALLBACK_IMAGE}
+    alt={project.image ? `Captura del proyecto ${project.name}` : `${project.name} — imagen ilustrativa`}
+    loading="lazy"
+    class="mb-6 aspect-video w-full rounded-xl border border-white/10 object-cover"
+  />
+  <p class="text-xs font-semibold tracking-wide text-brand-300 uppercase">{project.type}</p>
+  <h3 class="mt-2 text-xl font-semibold text-white">{project.name}</h3>
+  <p class="mt-2 text-sm leading-relaxed text-slate-400">{project.description}</p>
+  {project.features?.length ? (
+    <ul class="mt-5 flex-1 space-y-2.5">
+      {project.features.map((feature) => (
+        <li class="flex items-start gap-2.5 text-sm text-slate-300">
+          <span class="mt-0.5 flex h-4.5 w-4.5 shrink-0 items-center justify-center rounded-full bg-brand-500/15 text-brand-300">
+            <Check size={12} aria-hidden="true" />
+          </span>
+          {feature}
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <span class="flex-1" aria-hidden="true"></span>
+  )}
+  {project.technologies?.length ? (
+    <ul class="mt-5 flex flex-wrap gap-2" aria-label={`Tecnologías de ${project.name}`}>
+      {project.technologies.map((tech) => (
+        <li class="rounded-md border border-white/10 bg-night-950 px-2.5 py-1 text-xs text-slate-300">{tech}</li>
+      ))}
+    </ul>
+  ) : null}
+  {project.url ? (
+    <a
+      href={project.url}
+      target="_blank"
+      rel="noopener"
+      class="link-hover mt-6 inline-flex items-center gap-1.5 border-t border-white/10 pt-5 text-sm font-semibold text-brand-300 hover:text-white"
+    >
+      {content.work.visitLabel}
+      <ExternalLink size={14} aria-hidden="true" />
+    </a>
+  ) : null}
+</article>
