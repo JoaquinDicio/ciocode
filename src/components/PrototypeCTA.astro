@@ -1,34 +1,84 @@
 ---
-import { MessageCircle } from '@lucide/astro';
+import { Check, Clock, MessageCircle, ShieldCheck } from '@lucide/astro';
 import { whatsappUrl } from '../config/site';
 import { content } from '../i18n';
 
 const copy = content.prototype;
 const cta = whatsappUrl(content.whatsapp.prototypeMessage);
+const bullets = 'bullets' in copy ? (copy.bullets as string[]) : [];
+const steps = 'steps' in copy ? (copy.steps as { n: string; t: string; d: string }[]) : [];
+const cardTitle = 'cardTitle' in copy ? (copy.cardTitle as string) : '';
+const cardNote = 'cardNote' in copy ? (copy.cardNote as string) : '';
+const reassurance = 'reassurance' in copy ? (copy.reassurance as string) : '';
+const note = 'note' in copy ? (copy.note as string) : '';
 ---
 
 <section id="prototipo" class="scroll-mt-20 border-b border-white/5">
   <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-20">
     <div
-      class="panel-gradient flex flex-col items-start gap-6 rounded-2xl border border-brand-400/25 px-6 py-10 sm:px-10 md:flex-row md:items-center md:justify-between"
+      class="panel-gradient rounded-2xl border border-brand-400/25 px-6 py-10 sm:px-10 md:py-12"
       data-aos="fade-up"
     >
-      <div class="max-w-2xl">
-        <p class="text-sm font-semibold tracking-wide text-brand-300 uppercase">{copy.eyebrow}</p>
-        <h2 class="mt-3 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-          {copy.titleBefore}<span class="text-gradient">{copy.titleAccent}</span>{copy.titleAfter}
-        </h2>
-        <p class="mt-3 leading-relaxed text-slate-400">{copy.description}</p>
+      <div class="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
+        <div class="max-w-2xl flex-1">
+          <p class="text-sm font-semibold tracking-wide text-brand-300 uppercase">{copy.eyebrow}</p>
+          <h2 class="mt-3 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+            {copy.titleBefore}<span class="text-gradient">{copy.titleAccent}</span>{copy.titleAfter}
+          </h2>
+          <p class="mt-3 leading-relaxed text-slate-400">{copy.description}</p>
+          {bullets.length ? (
+            <ul class="mt-5 space-y-2.5">
+              {bullets.map((item) => (
+                <li class="flex items-start gap-2.5 text-sm text-slate-200">
+                  <span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-500/15 text-brand-300">
+                    <Check size={14} aria-hidden="true" />
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          ) : null}
+        </div>
+
+        <aside class="card-subtle w-full shrink-0 rounded-2xl p-7 sm:p-8 lg:max-w-sm" aria-label={cardTitle}>
+          <p class="text-base font-semibold text-white">{cardTitle}</p>
+          <a
+            href={cta}
+            target="_blank"
+            rel="noopener"
+            data-track="whatsapp-prototipo"
+            class="btn-primary btn-gradient mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg px-6 py-3 text-base font-semibold text-white"
+          >
+            <MessageCircle size={18} aria-hidden="true" />
+            {copy.cta}
+          </a>
+          <p class="mt-3 flex items-center justify-center gap-1.5 text-xs text-slate-400">
+            <Clock size={13} aria-hidden="true" />
+            {cardNote}
+          </p>
+          <p class="mt-1.5 flex items-center justify-center gap-1.5 text-xs text-slate-500">
+            <ShieldCheck size={13} aria-hidden="true" />
+            {reassurance}
+          </p>
+        </aside>
       </div>
-      <a
-        href={cta}
-        target="_blank"
-        rel="noopener"
-        class="btn-primary btn-gradient inline-flex shrink-0 items-center gap-2 rounded-lg px-6 py-3 text-base font-semibold text-white"
-      >
-        <MessageCircle size={18} aria-hidden="true" />
-        {copy.cta}
-      </a>
+
+      {steps.length ? (
+        <ol class="mt-8 grid gap-5 border-t border-white/10 pt-6 sm:grid-cols-3">
+          {steps.map((s) => (
+            <li class="flex items-start gap-3 rounded-2xl border border-white/10 bg-night-950/60 px-4 py-3.5">
+              <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-500/20 text-sm font-bold text-brand-300">
+                {s.n}
+              </span>
+              <span>
+                <span class="block text-sm font-semibold text-white">{s.t}</span>
+                <span class="block text-xs text-slate-400">{s.d}</span>
+              </span>
+            </li>
+          ))}
+        </ol>
+      ) : null}
+      {note ? <p class="mt-4 text-xs text-slate-500">{note}</p> : null}
     </div>
   </div>
 </section>

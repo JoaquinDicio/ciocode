@@ -4,8 +4,7 @@ import { whatsappUrl } from "../config/site";
 import { content } from "../i18n";
 
 const hero = content.hero;
-const primaryCta = whatsappUrl(content.whatsapp.defaultMessage);
-const secondaryCta = whatsappUrl(content.whatsapp.secondaryMessage);
+const primaryCta = whatsappUrl(content.whatsapp.prototypeMessage);
 // El rotador necesita la primera palabra duplicada al final para un loop fluido.
 const rotatorWords = [...hero.rotatorWords, hero.rotatorWords[0]];
 ---
@@ -50,15 +49,15 @@ const rotatorWords = [...hero.rotatorWords, hero.rotatorWords[0]];
           href={primaryCta}
           target="_blank"
           rel="noopener"
+          data-track="whatsapp-hero-prototipo"
           class="btn-primary btn-gradient inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 text-base font-semibold text-white"
         >
           <MessageCircle size={18} aria-hidden="true" />
           {hero.primaryCta}
         </a>
         <a
-          href={secondaryCta}
-          target="_blank"
-          rel="noopener"
+          href="#trabajos"
+          data-track="hero-ver-trabajos"
           class="btn-secondary inline-flex items-center justify-center gap-2 rounded-lg border border-white/15 px-6 py-3 text-base font-medium text-slate-200"
         >
           {hero.secondaryCta}

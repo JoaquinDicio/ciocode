@@ -1,8 +1,8 @@
 {
   "site": {
     "name": "CIOCODE",
-    "tagline": "Soluciones digitales para hacer crecer tu negocio.",
-    "description": "Desarrollamos sitios web, sistemas, automatizaciones y productos digitales a medida para empresas que necesitan soluciones reales.",
+    "tagline": "Desarrollo web y sistemas a medida en Argentina",
+    "description": "Desarrollamos sitios web, sistemas, automatizaciones y productos digitales a medida para empresas en Argentina que necesitan conseguir clientes y ordenar su operación.",
     "locale": "es_AR"
   },
   "nav": {
@@ -16,22 +16,18 @@
         "href": "#trabajos"
       },
       {
-        "label": "Cómo trabajamos",
-        "href": "#proceso"
-      },
-      {
-        "label": "Sobre CIOCODE",
-        "href": "#sobre-ciocode"
+        "label": "Preguntas",
+        "href": "#faq"
       }
     ],
-    "cta": "Contanos qué necesitás"
+    "cta": "Solicitar prototipo"
   },
 
   "hero": {
-    "badge": "Desarrollo de software y soluciones digitales",
-    "titleBefore": "Convertimos necesidades de negocio en ",
-    "titleAccent": "soluciones digitales",
-    "titleAfter": ".",
+    "badge": "Desarrollo a medida · Respuesta en menos de 24 h",
+    "titleBefore": "Webs y sistemas que ",
+    "titleAccent": "consiguen clientes",
+    "titleAfter": " y ordenan tu negocio.",
     "rotatorLabel": "Desarrollamos",
     "rotatorWords": [
       "sitios web",
@@ -40,20 +36,20 @@
       "productos SaaS"
     ],
     "rotatorSrText": "Desarrollamos sitios web, sistemas a medida, automatizaciones y productos SaaS.",
-    "primaryCta": "Contanos qué necesitás",
-    "secondaryCta": "Hablemos por WhatsApp",
+    "primaryCta": "Solicitar prototipo sin costo",
+    "secondaryCta": "Ver trabajos reales",
     "stats": [
       {
-        "label": "Enfoque",
-        "value": "A medida"
+        "label": "Proyectos",
+        "value": "6+ en producción"
       },
       {
-        "label": "Desarrollo",
-        "value": "Completo"
+        "label": "Respuesta",
+        "value": "En menos de 24 h"
       },
       {
-        "label": "Resultado",
-        "value": "En producción"
+        "label": "Soporte",
+        "value": "Post-lanzamiento"
       }
     ],
     "aside": {
@@ -62,7 +58,7 @@
         "Una web profesional para presentar tu negocio y generar consultas.",
         "Un sistema para ordenar procesos, stock, reparaciones y ventas.",
         "Automatizaciones para reducir tareas repetitivas y ahorrar tiempo.",
-        "Renovacion de equipos informáticos para mejorar la calidad de tu negocio."
+        "Renovación de equipos informáticos para mejorar la calidad de tu negocio."
       ],
       "note": "Entendemos tu necesidad, diseñamos la solución y la llevamos a producción."
     }
@@ -81,6 +77,7 @@
     "description": "Desarrollamos soluciones digitales según lo que necesita cada negocio. Desde una web hasta sistemas y herramientas que forman parte de la operación diaria.",
     "featuredLabel": "Desarrollo web",
     "featuredLink": "Conocé nuestra propuesta →",
+    "ctaLabel": "Quiero esto",
     "note": "Si necesitás una solución diferente, también podemos desarrollarla.",
     "items": [
       {
@@ -118,7 +115,7 @@
   },
   "work": {
     "eyebrow": "Últimos trabajos",
-    "title": "Proyectos reales, soluciones ",
+    "title": "Proyectos reales, soluciones en producción",
     "description": "Cada proyecto parte de una necesidad concreta. Estas son algunas de las soluciones que desarrollamos.",
     "items": [
       {
@@ -192,7 +189,33 @@
     "titleAccent": "prototipo sin costo",
     "titleAfter": "",
     "description": "Contanos tu idea y te mostramos cómo podría verse hecha realidad. Vas a ver tu propuesta puesta en marcha y el valor que puede aportar a tu negocio, antes de tomar una decisión.",
-    "cta": "Solicitar mi prototipo"
+    "cta": "Solicitar mi prototipo",
+    "bullets": [
+      "Maqueta visual de tu web o sistema con tus contenidos",
+      "Propuesta de alcance y pasos para llevarlo a producción",
+      "Entrega en 48-72 h hábiles, sin compromiso"
+    ],
+    "steps": [
+      {
+        "n": "1",
+        "t": "Contanos tu idea",
+        "d": "Por WhatsApp, en 2 minutos"
+      },
+      {
+        "n": "2",
+        "t": "Recibilo en 48-72 h",
+        "d": "Maqueta + propuesta clara"
+      },
+      {
+        "n": "3",
+        "t": "Decidís sin compromiso",
+        "d": "Sin tarjeta ni pagos"
+      }
+    ],
+    "cardTitle": "Empezá en 2 minutos",
+    "cardNote": "Respuesta en menos de 24 h",
+    "reassurance": "Sin tarjeta · Sin compromiso",
+    "note": "Sin compromiso. Solo pedimos una breve descripción para prepararlo."
   },
   "process": {
     "eyebrow": "Cómo trabajamos",
@@ -211,7 +234,7 @@
       },
       {
         "number": "03",
-        "title": "Desarrolamos la solución",
+        "title": "Desarrollamos la solución",
         "description": "Construimos la solución y te mostramos avances para poder ajustar durante el proceso."
       },
       {
@@ -252,7 +275,55 @@
     "titleAccent": "necesitás resolver",
     "titleAfter": "?",
     "description": "Contanos qué necesitás. Aunque todavía no tengas definida la solución, podemos empezar por entender el problema.",
-    "cta": "Hablemos"
+    "cta": "Enviar por WhatsApp",
+    "directCta": "O escribinos directo",
+    "form": {
+      "nameLabel": "Tu nombre",
+      "namePlaceholder": "Ej: Martín",
+      "typeLabel": "¿Qué necesitás?",
+      "typeOptions": [
+        "Sitio web",
+        "Sistema a medida",
+        "Automatización",
+        "Producto SaaS",
+        "PC a medida",
+        "Todavía no lo sé"
+      ],
+      "messageLabel": "Contanos en 1-2 líneas",
+      "messagePlaceholder": "Ej: tengo un local y quiero una web para recibir consultas…",
+      "note": "Al enviar se abre WhatsApp con tu mensaje listo. Sin compromiso."
+    }
+  },
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Antes de escribirnos, sacate las dudas",
+    "description": "Respuestas cortas. Si tu caso es distinto, lo vemos por WhatsApp.",
+    "items": [
+      {
+        "q": "¿Cuánto cuesta una web o un sistema?",
+        "a": "Depende del alcance. Por eso ofrecemos un prototipo sin costo: con 2-3 datos te pasamos propuesta y rango de precio cerrado antes de empezar."
+      },
+      {
+        "q": "¿En cuánto tiempo lo tienen listo?",
+        "a": "Una landing típica en 1-2 semanas, un sistema a medida por etapas. El prototipo lo entregamos en 48-72 h hábiles."
+      },
+      {
+        "q": "¿El código y el dominio quedan a mi nombre?",
+        "a": "Sí. El desarrollo, dominio y contenidos quedan a tu nombre. Te entregamos accesos y documentación básica."
+      },
+      {
+        "q": "¿Qué pasa después del primer año de hosting y dominio gratis?",
+        "a": "Podés renovar con nosotros o llevarte el sitio a otro proveedor. No hay suscripción obligatoria."
+      },
+      {
+        "q": "¿Dan soporte post-lanzamiento?",
+        "a": "Sí. Acompañamos la puesta en marcha y ofrecemos soporte y mejoras por hora o mensual."
+      },
+      {
+        "q": "¿Cómo empezamos?",
+        "a": "Nos escribís por WhatsApp o con el formulario, te pedimos 3-4 datos y preparamos tu prototipo sin costo."
+      }
+    ]
   },
   "footer": {
     "tagline": "Desarrollo web, sistemas y soluciones digitales a medida.",
@@ -263,8 +334,9 @@
   "whatsapp": {
     "defaultMessage": "Hola CIOCODE, quiero consultar por una solución para mi negocio. ¿Podemos hablar?",
     "secondaryMessage": "Hola CIOCODE, tenemos una idea y queremos consultar si pueden ayudarnos a desarrollarla.",
-    "webMessage": "Hola CIOCODE, me interesa la propuesta de desarrollo web. ¿Me pasan más información?",
+    "webMessage": "Hola CIOCODE, me interesa la propuesta de desarrollo web con hosting y dominio gratis el primer año. ¿Me pasan más información?",
     "finalMessage": "Hola CIOCODE, tenemos una idea / un problema que necesitamos resolver. ¿Conversamos?",
-    "prototypeMessage": "Hola CIOCODE, quiero solicitar un prototipo sin costo para mi negocio."
+    "prototypeMessage": "Hola CIOCODE, quiero solicitar mi prototipo sin costo (48-72 h). Mi idea es: ",
+    "servicePrefix": "Hola CIOCODE, me interesa"
   }
 }
