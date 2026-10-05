@@ -245,21 +245,39 @@
     ]
   },
   "webOffer": {
-    "eyebrow": "Desarrollo web",
-    "title": "Una web profesional, lista para salir al mundo",
-    "description": "Si necesitás presencia online, nos encargamos del desarrollo y de toda la configuración necesaria para que tu sitio quede publicado y funcionando.",
-    "cta": "Quiero mi web",
-    "listTitle": "La propuesta incluye",
-    "freeBadge": "Hosting y dominio gratis durante el primer año",
+    "eyebrow": "Landing pages",
+    "title": "Landing page profesional",
+    "description": "Para presentar lo que hacés y recibir consultas.",
+    "priceOld": "$ 220.000",
+    "priceNew": "$ 180.000",
+    "priceNote": "Pago único • Sin pagos mensuales",
+    "cta": "Quiero mi prototipo de web",
+    "trust": "Respuesta en menos de 24 h • Sin compromiso",
+    "listTitle": "Qué incluye",
     "included": [
-      "Desarrollo del sitio a medida",
-      "Hosting incluido durante el primer año",
-      "Dominio incluido durante el primer año",
-      "Certificado SSL",
-      "Configuración inicial",
-      "Sitio publicado y funcionando"
+      "Lista para recibir consultas",
+      "Hecha para tu negocio. Diseño personalizado",
+      "Hosting y Dominio gratis por un año. Sin pagos mensuales",
+      "Publicada y funcionando",
+      "Prototipo en 48-72 h, sin compromiso"
     ],
-    "note": "El hosting, el dominio y el SSL están incluidos durante el primer año. Después, podés continuar con el servicio que necesites. No es una suscripción obligatoria."
+    "steps": [
+      {
+        "n": "1",
+        "t": "Contanos tu negocio",
+        "d": "Por WhatsApp, en 2 minutos"
+      },
+      {
+        "n": "2",
+        "t": "Recibí tu prototipo de web en 48-72 h",
+        "d": "Maqueta + propuesta clara"
+      },
+      {
+        "n": "3",
+        "t": "Decidís sin compromiso",
+        "d": "Sin tarjeta ni pagos"
+      }
+    ]
   },
   "about": {
     "eyebrow": "Sobre CIOCODE",
@@ -334,7 +352,7 @@
   "whatsapp": {
     "defaultMessage": "Hola CIOCODE, quiero consultar por una solución para mi negocio. ¿Podemos hablar?",
     "secondaryMessage": "Hola CIOCODE, tenemos una idea y queremos consultar si pueden ayudarnos a desarrollarla.",
-    "webMessage": "Hola CIOCODE, me interesa la propuesta de desarrollo web con hosting y dominio gratis el primer año. ¿Me pasan más información?",
+    "webMessage": "Hola CIOCODE, quiero mi prototipo de web ($180.000 promo). Mi negocio es: ",
     "finalMessage": "Hola CIOCODE, tenemos una idea / un problema que necesitamos resolver. ¿Conversamos?",
     "prototypeMessage": "Hola CIOCODE, quiero solicitar mi prototipo sin costo (48-72 h). Mi idea es: ",
     "servicePrefix": "Hola CIOCODE, me interesa"
