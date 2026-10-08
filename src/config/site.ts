@@ -8,7 +8,7 @@ export const siteConfig = {
   locale: content.site.locale,
   // TODO: completar datos reales de contacto. Dejar vacío hasta tenerlos.
   contact: {
-    whatsappNumber: '541126655209',
+    whatsappNumber: '5491126655209',
     email: '',
     instagram: 'ciocode',
     instagramUrl: 'https://www.instagram.com/ciocode/',

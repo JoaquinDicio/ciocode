@@ -10,7 +10,7 @@ const form = 'form' in copy ? copy.form : null;
 
 <section id="contacto" class="hero-glow scroll-mt-20">
   <div class="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-28">
-    <div class="panel-gradient grid gap-10 rounded-2xl border border-brand-400/25 px-6 py-12 sm:px-10 md:grid-cols-2 md:items-start md:py-14" data-aos="fade-up">
+    <div class="panel-gradient grid gap-10 rounded-2xl border border-brand-400/25 px-5 py-10 sm:px-10 md:grid-cols-2 md:items-start md:py-14" data-aos="fade-up">
       <div class="text-left">
         <h2 class="max-w-xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
           {copy.titleBefore}<span class="text-gradient">{copy.titleAccent}</span>{copy.titleAfter}
@@ -30,7 +30,7 @@ const form = 'form' in copy ? copy.form : null;
         </a>
       </div>
 
-      <form id="contact-form" class="card-subtle rounded-2xl p-7 sm:p-8" data-wa-number={siteConfig.contact.whatsappNumber}>
+      <form id="contact-form" class="card-subtle rounded-2xl p-5 sm:p-8" data-wa-number={siteConfig.contact.whatsappNumber}>
         <label class="block text-sm font-medium text-slate-200" for="cf-name">
           {form?.nameLabel ?? 'Tu nombre'}
         </label>
@@ -40,7 +40,7 @@ const form = 'form' in copy ? copy.form : null;
           type="text"
           autocomplete="name"
           placeholder={form?.namePlaceholder ?? ''}
-          class="mt-2 w-full rounded-lg border border-white/10 bg-night-950 px-3.5 py-2.5 text-sm text-white placeholder:text-slate-500 focus:border-brand-400 focus:outline-none"
+          class="mt-2 w-full rounded-lg border border-white/10 bg-night-950 px-3.5 py-2.5 text-base text-white placeholder:text-slate-500 focus:border-brand-400 focus:outline-none sm:text-sm"
         />
         <label class="mt-5 block text-sm font-medium text-slate-200" for="cf-type">
           {form?.typeLabel ?? '¿Qué necesitás?'}
@@ -48,7 +48,7 @@ const form = 'form' in copy ? copy.form : null;
         <select
           id="cf-type"
           name="type"
-          class="mt-2 w-full rounded-lg border border-white/10 bg-night-950 px-3.5 py-2.5 text-sm text-white focus:border-brand-400 focus:outline-none"
+          class="mt-2 w-full rounded-lg border border-white/10 bg-night-950 px-3.5 py-2.5 text-base text-white focus:border-brand-400 focus:outline-none sm:text-sm"
         >
           {(form?.typeOptions ?? []).map((opt) => <option>{opt}</option>)}
         </select>
@@ -60,7 +60,7 @@ const form = 'form' in copy ? copy.form : null;
           name="message"
           rows="3"
           placeholder={form?.messagePlaceholder ?? ''}
-          class="mt-2 w-full resize-none rounded-lg border border-white/10 bg-night-950 px-3.5 py-2.5 text-sm text-white placeholder:text-slate-500 focus:border-brand-400 focus:outline-none"
+          class="mt-2 w-full resize-none rounded-lg border border-white/10 bg-night-950 px-3.5 py-2.5 text-base text-white placeholder:text-slate-500 focus:border-brand-400 focus:outline-none sm:text-sm"
         ></textarea>
         <button
           type="submit"

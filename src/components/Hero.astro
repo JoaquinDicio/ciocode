@@ -30,11 +30,11 @@ const rotatorWords = [...hero.rotatorWords, hero.rotatorWords[0]];
         }
       </h1>
       <div
-        class="mt-5 flex items-center gap-2 text-base text-slate-400"
+        class="mt-5 flex min-w-0 flex-wrap items-center gap-x-2 gap-y-1 text-base text-slate-400"
         aria-label={hero.rotatorSrText}
       >
         <span class="shrink-0">{hero.rotatorLabel}</span>
-        <span class="rotator font-semibold text-brand-300" aria-hidden="true">
+        <span class="rotator min-w-0 font-semibold text-brand-300" aria-hidden="true">
           <ul>
             {rotatorWords.map((word) => <li>{word}</li>)}
           </ul>

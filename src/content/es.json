@@ -41,7 +41,7 @@
     "stats": [
       {
         "label": "Proyectos",
-        "value": "6+ en producción"
+        "value": "+10 en producción"
       },
       {
         "label": "Respuesta",
@@ -119,18 +119,6 @@
     "description": "Cada proyecto parte de una necesidad concreta. Estas son algunas de las soluciones que desarrollamos.",
     "items": [
       {
-        "slug": "resticy",
-        "name": "Resticy",
-        "description": "Sistema de gestión de pedidos en tiempo real para restaurantes y cafeterías.",
-        "type": "Sistema a medida",
-        "features": [
-          "Pedidos en tiempo real desde cada mesa",
-          "Menú configurable por el local",
-          "QR por mesa para pedir sin espera",
-          "Cobros integrados con MercadoPago"
-        ]
-      },
-      {
         "slug": "blackstar-logistics",
         "name": "BlackstarLogistics",
         "description": "Landing page empresarial para presentar los servicios de comercio internacional del cliente.",
@@ -139,18 +127,20 @@
           "Presentación institucional de la empresa",
           "Detalle de servicios de comercio exterior"
         ],
-        "url": "https://blackstar-logistics.com/es/"
+        "url": "https://blackstar-logistics.com/es/",
+        "image": "/projects/blackstar-logistics.jpeg"
       },
       {
-        "slug": "marketplace-scrapper",
-        "name": "MarketplaceScrapper",
-        "description": "Herramienta que analiza publicaciones de compra-venta de forma automática.",
-        "type": "Automatización",
+        "slug": "vita-global-cargo",
+        "name": "Vita Global Cargo",
+        "description": "Landing page empresarial para empresa de logística internacional aérea, marítima y terrestre.",
+        "type": "Desarrollo web",
         "features": [
-          "Análisis automático de publicaciones con filtros",
-          "Informe con las mejores oportunidades de compra",
-          "Pensada para quienes hacen compra-venta"
-        ]
+          "Presentación de servicios logísticos integrales",
+          "Secciones de proceso, cultura y contacto"
+        ],
+        "url": "https://vitaglobalcargo.com",
+        "image": "/projects/vita-global-cargo.jpeg"
       },
       {
         "slug": "clinica-dental-serranos",
@@ -165,20 +155,29 @@
         "image": "/projects/dental-serranos.jpeg"
       },
       {
-        "slug": "manglar-bagheera",
-        "name": "Manglar de Bagheera",
-        "description": "Landing page desarrollada a medida para el cliente.",
-        "type": "Desarrollo web",
-        "url": "https://manglarbagheera.netlify.app/",
-        "image": "/projects/manglar-bagheera.jpeg"
+        "slug": "resticy",
+        "name": "Resticy",
+        "description": "Sistema de gestión de pedidos en tiempo real para restaurantes y cafeterías.",
+        "type": "Sistema a medida",
+        "features": [
+          "Pedidos en tiempo real desde cada mesa",
+          "Menú configurable por el local",
+          "QR por mesa para pedir sin espera",
+          "Cobros integrados con MercadoPago"
+        ],
+        "image": "/projects/resticy.jpeg"
       },
       {
-        "slug": "tecnica-rom",
-        "name": "Técnica Rom",
-        "description": "Landing page desarrollada a medida para el cliente.",
-        "type": "Desarrollo web",
-        "url": "https://joaquindicio.github.io/mech-website/",
-        "image": "/projects/tecnica-rom.jpeg"
+        "slug": "marketplace-scrapper",
+        "name": "MarketplaceScrapper",
+        "description": "Herramienta que analiza publicaciones de compra-venta de forma automática.",
+        "type": "Automatización",
+        "features": [
+          "Análisis automático de publicaciones con filtros",
+          "Informe con las mejores oportunidades de compra",
+          "Pensada para quienes hacen compra-venta"
+        ],
+        "image": "/projects/marketplace-scrapper.jpeg"
       }
     ],
     "visitLabel": "Visitar sitio"
